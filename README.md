@@ -1,6 +1,8 @@
 # 🥘 Recipe Assistant (RAG-based)
 
-This project is a **Recipe Assistant** powered by **Retrieval-Augmented Generation (RAG)**. It allows users to ask for recipe suggestions in natural language, retrieves relevant recipes using semantic search (FAISS + Sentence Transformers), and uses an LLM (e.g., GPT-4o) to generate helpful responses with contextual recipe information.
+This project is a **Recipe Assistant** powered by **Retrieval-Augmented Generation (RAG)**. It allows users to ask for recipe suggestions in natural language, retrieves relevant recipes using semantic search (FAISS + Sentence Transformers), and uses an LLM (e.g., GPT-4o) to generate helpful responses with contextual recipe information. 
+
+This beginner-friendly project introduces you to LLM applications using RAG with hands-on experience
 
 ---
 ![Recipe Assistant Application](recipe_assistant_screenshot.png)
