@@ -3,12 +3,13 @@
 This project is a **Recipe Assistant** powered by **Retrieval-Augmented Generation (RAG)**. It allows users to ask for recipe suggestions in natural language, retrieves relevant recipes using semantic search (FAISS + Sentence Transformers), and uses an LLM (e.g., GPT-4o) to generate helpful responses with contextual recipe information.
 
 ---
+![Recipe Assistant Application](recipe_assistant_screenshot.png)
 
 ## 📂 Project Structure
 
 ```
 .
-├── 13k-recipes.csv                  # Dataset of [13,000 recipes](https://github.com/josephrmartinez/recipe-dataset/)
+├── 13k-recipes.csv                  # Dataset of 13,000 recipes (source: https://github.com/josephrmartinez/recipe-dataset/)
 ├── requirements.txt                 # Python dependencies
 ├── fill_vector_database.py          # Script to generate and store FAISS vector index
 ├── streamlit_recipe_recommender.py  # Streamlit app for recipe chatbot
@@ -27,7 +28,7 @@ This project is a **Recipe Assistant** powered by **Retrieval-Augmented Generati
    - Creates a FAISS index and saves the metadata to `vector_store/`.
 
 2. **Chatbot UI** (`streamlit_recipe_recommender.py`)
-   - Accepts user input (e.g., "something with chicken and rice").
+   - Accepts user input (e.g., "something with eggplant and rice").
    - Embeds the query and retrieves top-matching recipes from the FAISS index.
    - Constructs a prompt with the retrieved recipes as context.
    - Sends the prompt to an OpenAI LLM (e.g., GPT-4o or GPT-3.5) for a final answer.
@@ -72,6 +73,7 @@ streamlit run streamlit_recipe_recommender.py
 
 ## 🧾 Example Usage
 
+First fill in your OpenAI key and press enter.
 > **User**: I want something quick and healthy with broccoli.  
 > **Assistant**: Based on your request, here's a healthy and quick recipe:  
 > *Title*: Broccoli Stir Fry  
@@ -79,6 +81,7 @@ streamlit run streamlit_recipe_recommender.py
 > *Instructions*: Sauté garlic, add broccoli, cook until tender, drizzle with soy sauce...
 
 ---
+![Recipe Assistant Application](recipe_assistant_screenshot.png)
 
 ## 📌 Notes
 
